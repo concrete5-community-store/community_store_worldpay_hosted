@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="refresh" content="5;url='http://<your URL>/index.php/checkout'" />
+</HEAD>
+<BODY>
+<br/>
+<H1>The purchase was declined, cancelled or there was another problem with it.</H1>
+<WPDISPLAY ITEM=banner>
+<br/>
+<p><!--ERRMSG--></p>
+You should automatically return back to the Store in 5 seconds, or click <a href="http://<your URL>/index.php/checkout'";> here </a> to be manually returned.
+</BODY>
+</HTML>

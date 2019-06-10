@@ -98,6 +98,7 @@ class CommunityStoreWorldpayHostedPaymentMethod extends StorePaymentMethod
 
     public function submitPayment()
     {
+        //nothing to do except return true
         return array('error' => 0, 'transactionReference' => '');
     }
 
@@ -125,7 +126,7 @@ class CommunityStoreWorldpayHostedPaymentMethod extends StorePaymentMethod
         }
 
         //Setup a default response just in case the worldpay response files haven't been uploaded into the File Manager
-        $response = '<html><head><title>'.t("WorldPay Transaction").'</title></head><WPDISPLAY FILE=\"header.html\"><body><h1>'.t("Default Worldpay Payment Response file").'</h1><WPDISPLAY ITEM="banner"><WPDISPLAY FILE="footer.html"></body></html>';
+        $response = '<html><head><title>' . t("WorldPay Transaction") . '</title></head><WPDISPLAY FILE=\"header.html\"><body><h1>' . t("Default Worldpay Payment Response file") . '</h1><WPDISPLAY ITEM="banner"><WPDISPLAY FILE="footer.html"></body></html>';
         $res = 'VERIFIED'; // Stays VERIFIED if each test passes
 
         // First check the Payment Response Transaction Status field, 'tranStatus'.
@@ -146,6 +147,7 @@ class CommunityStoreWorldpayHostedPaymentMethod extends StorePaymentMethod
             }
         }
 
+
         // Verify the local cart total against the returned 'amount'
         if (strcmp($res, 'VERIFIED') == 0) {
             $currSection = 'CARTAMOUNTTEST';
@@ -160,6 +162,7 @@ class CommunityStoreWorldpayHostedPaymentMethod extends StorePaymentMethod
                 $res = 'UNVERIFIED'; // No cartId returned!
             }
         }
+
 
         $list = new \Concrete\Core\File\FileList(); // Used to get the response files
         if (strcmp($res, 'VERIFIED') == 0) {

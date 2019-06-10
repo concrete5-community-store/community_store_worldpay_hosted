@@ -1,0 +1,13 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="refresh" content="5;url='http://<your URL>/index.php/checkout/complete'" />
+</HEAD>
+<BODY>
+<br/>
+<H1> Thank you for your purchase </H1>
+<WPDISPLAY ITEM=banner>
+<br/>
+You should automatically return back to the Store in 5 seconds, or click <a href="http://<your URL>/index.php/checkout/complete'";> here </a> to be manually returned.
+</BODY>
+</HTML>

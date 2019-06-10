@@ -18,9 +18,7 @@ if($worldpayTestMode==true) {
 <input type="hidden" name="cartId" value="<?= $orderID?>">
 <input type="hidden" name="currency" value="<?= $currencyCode?>">
 <input type="hidden" name="amount" value="<?= $total?>">
-
 <? echo $testOrLive; ?>
-
 <input type="hidden" name="address1" value="<?= $customer->getValue("billing_address")->address1?>">
 <input type="hidden" name="address2" value="<?= $customer->getValue("billing_address")->address2?>">
 <input type="hidden" name="town" value="<?= $customer->getValue("billing_address")->city?>">
@@ -29,7 +27,5 @@ if($worldpayTestMode==true) {
 <input type="hidden" name="country" value="<?= $customer->getValue("billing_address")->country?>">
 <input type="hidden" name="email" value="<?= $customer->getEmail()?>">
 <input type="hidden" name="desc" value="<?= t('Order from %s', $siteName)?>">
-<input type="hidden" name="notify_url" value="<?= $notifyURL?>">
-<input type="hidden" name="return_url" value="<?= $returnURL?>">
 
 

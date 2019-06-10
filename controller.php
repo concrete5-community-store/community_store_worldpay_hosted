@@ -11,7 +11,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'community_store_worldpay_hosted';
     protected $appVersionRequired = '5.7.2';
-    protected $pkgVersion = '1.0';
+    protected $pkgVersion = '1.0.1';
 
     public function getPackageDescription()
     {
@@ -45,7 +45,7 @@ class Controller extends Package
     }
 
     public function on_start() {
-        // Check the Routes are in place
+        // Setup the URL to the Controller for the WorldPay Payment Response Message
         Route::register('/checkout/worldpay_hosted_response','\Concrete\Package\CommunityStoreWorldpayHosted\Src\CommunityStore\Payment\Methods\CommunityStoreWorldpayHosted\CommunityStoreWorldpayHostedPaymentMethod::validateCompletion');
     }
 }
